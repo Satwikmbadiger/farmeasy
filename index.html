@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width= device-width, initial-scale=1.0"> 
+    <title>FarmEasy</title>
+</head>
+<body> <center>
+    <h1>Transportation</h1>
+    <br><br><br>
+    <div>
+    <form action="back.html">
+        
+        <label for="pickup_loc">Pickup Location</label>
+        <select name="pickup_loc" id="pickup_loc" required>
+            <option value=""></option>
+            <option value="loc1">Chickballapura</option>
+            <option value="loc2">Tumkur</option>
+            <option value="loc3">Ramnagara</option>
+            
+        </select required>
+        <br>
+        <br>
+        <label for="drop_loc">Drop Location</label>
+        <select name="drop_loc" id="drop_loc" required>
+            <option value=""></option>
+            <option value="loc4">Bengaluru</option>
+            <option value="loc5">Mangaluru</option>
+            <option value="loc6">Mysuru</option>
+        </select required>
+        <br>
+        <br>
+        <label for="qty">Quantity (in Kgs)</label>
+        <input type="number" name="qty" id="qty" min="10" max="1000" required>
+        <br>
+        <br>
+        <label for="type">Crop Type</label>
+        <select name="type" id="type" required>
+            <option value=""></option>
+            <option>Wheat</option>
+            <option>Rice</option>
+            <option>Maize</option>
+            <option>Ragi</option>
+        </select required>
+        <br><br>
+        <!--
+        <label for="p_date">Pickup Date</label>
+        <input type="date" name="date" id="date" min="2022-01-01" max="2023-12-31" required>
+        <label for="p_time">Pickup Time</label>
+        <input type="time" name="time" id="time" min="09:00" max="18:00" required>
+
+        <br><br>
+        -->
+
+        <label for="p_date">Drop Date</label>
+        <input type="date" name="date" id="date" min="2022-01-01" max="2023-12-31" required>
+        <!--<label for="p_time">Drop Time</label>
+        <input type="time" name="time" id="time" min="09:00" max="18:00" required>
+        <br><br>
+        -->
+
+    
+
+        </select>
+        <br><br>
+
+
+
+
+
+
+        
+
+
+
+        <button type="submit">Submit</button>
+    </form required>
+</div>
+</center>   
+</body>
+</html>
