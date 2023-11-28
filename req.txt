@@ -1,0 +1,2 @@
+npm init and then press enter continously
+npm install express body-parser

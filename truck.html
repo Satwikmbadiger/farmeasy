@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Truck Data</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <h1>Truck Data</h1>
+    <table id="truckTable">
+        <thead>
+            <tr>
+                <th>Pickup</th>
+                <th>Destination</th>
+                <th>Truck ID</th>
+                <th>Delivery Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Truck data will be inserted here -->
+        </tbody>
+    </table>
+
+    <script>
+        fetch('/getTrucks')
+            .then(response => response.json())
+            .then(trucks => {
+                const tableBody = document.getElementById('truckTable').tBodies[0];
+                trucks.forEach(truck => {
+                    const row = tableBody.insertRow();
+                    row.insertCell().textContent = truck.pickup;
+                    row.insertCell().textContent = truck.destination;
+                    row.insertCell().textContent = truck.truck_id;
+                    row.insertCell().textContent = new Date(truck.delivery_date).toLocaleDateString();
+                });
+            })
+            .catch(err => console.error('Error fetching trucks:', err));
+    </script>
+</body>
+</html>
