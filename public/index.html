@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Route Calculator</title>
+</head>
+<body>
+
+    <div class="container">
+        <label for="pickup">Pickup Location:</label>
+        <select id="pickup" name="pickup">
+            <option value="Place 1">Place 1</option>
+            <option value="Place 2">Place 2</option>
+            <option value="Place 3">Place 3</option>
+            <option value="Place 4">Place 4</option>
+            <option value="Place 5">Place 5</option>
+        </select>
+
+        <label for="destination">Destination:</label>
+        <select id="destination" name="destination">
+            <option value="Place 1">Place 1</option>
+            <option value="Place 2">Place 2</option>
+            <option value="Place 3">Place 3</option>
+            <option value="Place 4">Place 4</option>
+            <option value="Place 5">Place 5</option>
+        </select>
+
+        <label for="quantity">Quantity (in kgs):</label>
+        <input type="text" id="quantity" name="quantity">
+
+        <label for="crop">Crop:</label>
+        <select id="crop" name="crop">
+            <option value="Rice">Rice</option>
+            <option value="Wheat">Wheat</option>
+            <option value="Sugarcane">Sugarcane</option>
+        </select>
+
+        <label for="deliveryDate">Delivery Date:</label>
+        <input type="text" id="deliveryDate" name="deliveryDate">
+
+        <button onclick="calculateRoute()">Calculate Route</button>
+
+        <div id="truckFrame"></div>
+
+        <button id="submitButton" onclick="submitBookingRequest()" disabled>Submit Booking Request</button>
+
+        <p id="resultLabel"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
